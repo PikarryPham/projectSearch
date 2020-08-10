@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SettingsWindow(object):
     def openMain(self):
         from guiMenu import Ui_MainWindow
-        from game import func_Setting
+
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.window)
@@ -26,6 +26,7 @@ class Ui_SettingsWindow(object):
     def setupUi(self, SettingsWindow):
         SettingsWindow.setObjectName("SettingsWindow")
         SettingsWindow.resize(800, 600)
+        SettingsWindow.setWindowIcon(QtGui.QIcon("pac.png"))
         SettingsWindow.setStyleSheet("background-color: rgb(47, 72, 88);")
         self.centralwidget = QtWidgets.QWidget(SettingsWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -92,44 +93,46 @@ class Ui_SettingsWindow(object):
         self.label_3.setFont(font)
         self.label_3.setStyleSheet("color: rgb(255, 204, 50);")
         self.label_3.setObjectName("label_3")
+        # onBtn
         self.onButton = QtWidgets.QPushButton(self.centralwidget)
-        self.onButton.setGeometry(QtCore.QRect(110, 390, 93, 28))
+        self.onButton.setGeometry(QtCore.QRect(110, 390, 93, 40))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.onButton.setFont(font)
-        self.onButton.setStyleSheet("background-color: rgb(0, 255, 0);\n"
+        self.onButton.setStyleSheet("background-color: rgb(0, 0, 127);\n"
                                     "color: rgb(255, 255, 255);")
         self.onButton.setObjectName("onButton")
+        # offBtN
         self.offButton = QtWidgets.QPushButton(self.centralwidget)
-        self.offButton.setGeometry(QtCore.QRect(540, 390, 93, 28))
+        self.offButton.setGeometry(QtCore.QRect(540, 390, 93, 40))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.offButton.setFont(font)
-        self.offButton.setStyleSheet("background-color: rgb(255, 0, 0);\n"
+        self.offButton.setStyleSheet("background-color: rgb(0, 0, 127);\n"
                                      "color: rgb(255, 255, 255);")
         self.offButton.setObjectName("offButton")
         self.saveButton = QtWidgets.QPushButton(self.centralwidget)
-        self.saveButton.setGeometry(QtCore.QRect(110, 490, 93, 41))
+        self.saveButton.setGeometry(QtCore.QRect(110, 490, 93, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.saveButton.setFont(font)
-        self.saveButton.setStyleSheet("background-color: rgb(255, 85, 0);")
+        self.saveButton.setStyleSheet("background-color: rgb(254, 124, 103);")
         self.saveButton.setObjectName("saveButton")
         self.returnButton = QtWidgets.QPushButton(self.centralwidget)
-        self.returnButton.setGeometry(QtCore.QRect(540, 490, 131, 41))
+        self.returnButton.setGeometry(QtCore.QRect(540, 490, 131, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.returnButton.setFont(font)
         self.returnButton.setStyleSheet(
-            "background-color: rgb(170, 255, 255);")
+            "background-color: rgb(254, 124, 103);")
         self.returnButton.setObjectName("returnButton")
         self.returnButton.clicked.connect(self.openMain)
         self.returnButton.clicked.connect(SettingsWindow.close)

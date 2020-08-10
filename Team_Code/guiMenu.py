@@ -8,6 +8,7 @@
 
 # tải thêm module PyQt5 này về nghen
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon, QPixmap, QMovie
 
 
 class Ui_MainWindow(object):
@@ -25,6 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
+        MainWindow.setWindowIcon(QtGui.QIcon("pac.png"))
         MainWindow.setStyleSheet("background-color: rgb(47, 72, 88);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -59,6 +61,17 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setStyleSheet("color:rgb(255, 255, 255)")
         self.label.setObjectName("label")
+        # avaPacman
+        # self.label11 = QtWidgets.QLabel(self.centralwidget)
+        # self.label11.setPixmap(QtGui.QPixmap("pac.png"))
+
+        # self.label11.move(50, 70)
+        self.movie = QMovie("gifPacman.gif", QByteArray(), self)
+        self.movie.setCacheMode(QMovie.CacheAll)
+        self.movie.setSpeed(100)
+        self.movie_screen.setMovie(self.movie)
+        # self.label11.resize(self.label11.setPixmap(QtGui.QPixmap("pacAva.png")).width(
+        # ), self.label11.setPixmap(QtGui.QPixmap("pacAva.png")).height())
         # Name - Trangname
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(150, 400, 500, 30))
@@ -81,11 +94,11 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         # pacman
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(110, 70, 621, 91))
+        self.label_2.setGeometry(QtCore.QRect(170, 70, 621, 91))
         font = QtGui.QFont()
         font.setPointSize(48)
         font.setBold(True)
-        font.setWeight(75)
+        font.setWeight(60)
         self.label_2.setFont(font)
         self.label_2.setStyleSheet("color: rgb(255, 255, 0)")
         self.label_2.setObjectName("label_2")

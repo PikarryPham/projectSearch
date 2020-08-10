@@ -16,7 +16,7 @@ trace = []
 queue = []
 times = 0
 is_found = 0
-f = open("../input/input2.txt", "r")
+# f = open("../input/input2.txt", "r")
 
 
 class Game:
