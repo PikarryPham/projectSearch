@@ -62,14 +62,14 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("color:rgb(255, 255, 255)")
         self.label.setObjectName("label")
         # avaPacman
-        # self.label11 = QtWidgets.QLabel(self.centralwidget)
-        # self.label11.setPixmap(QtGui.QPixmap("pac.png"))
+        self.label11 = QtWidgets.QLabel(self.centralwidget)
+        self.label11.setPixmap(QtGui.QPixmap("pac.png"))
 
-        # self.label11.move(50, 70)
-        self.movie = QMovie("gifPacman.gif", QByteArray(), self)
-        self.movie.setCacheMode(QMovie.CacheAll)
-        self.movie.setSpeed(100)
-        self.movie_screen.setMovie(self.movie)
+        self.label11.move(50, 70)
+        # self.movie = QMovie("gifPacman.gif", QByteArray(), self)
+        # self.movie.setCacheMode(QMovie.CacheAll)
+        # self.movie.setSpeed(100)
+        # self.movie_screen.setMovie(self.movie)
         # self.label11.resize(self.label11.setPixmap(QtGui.QPixmap("pacAva.png")).width(
         # ), self.label11.setPixmap(QtGui.QPixmap("pacAva.png")).height())
         # Name - Trangname
