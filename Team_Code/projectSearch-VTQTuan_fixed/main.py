@@ -33,7 +33,7 @@ clock = pygame.time.Clock()
 
 
 def RunLV1(lcol, lrow, row, col, start, Len):
-    WINDOW_SIZE = [600, 600]
+    WINDOW_SIZE = [800, 800]
     screen = pygame.display.set_mode(WINDOW_SIZE)
     tempX, tempY = init(int(start[0]), int(start[1]))
     print(tempX)
@@ -149,7 +149,7 @@ index = 0
 
 # ----------------------------LV2-------------------------------------------------------
 def RunLV2(lcol, lrow, row, col, start, Len):
-    WINDOW_SIZE = [700, 700]
+    WINDOW_SIZE = [800, 800]
     screen = pygame.display.set_mode(WINDOW_SIZE)
     tempX, tempY = init(int(start[0]), int(start[1]))
 
@@ -280,7 +280,7 @@ def RunLV2(lcol, lrow, row, col, start, Len):
 
 if __name__ == "__main__":
 
-    new_game = Game(r"18x13_lv2.txt")
+    new_game = Game(r"17x9.txt")
     MapGame = new_game.map_game.map_matrix
     Start = new_game.map_game.pos
     row = int(len(MapGame))
@@ -288,7 +288,7 @@ if __name__ == "__main__":
     print(MapGame)
     # cheating level 1 and 2
     Food, path, explored, time_consuming = new_game.cheating_lv01_02(
-        algorithms='A_star')
+        algorithms='GBFS')
     # print(explored)
 
     lcol = []

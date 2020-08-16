@@ -53,6 +53,12 @@ class Game:
 
         return food,path, explored, time_consuming
 
+    def cheating_lv03(self):
+        pass
+    def cheating_lv04(self):
+        pass
+    
+
 
     
         
